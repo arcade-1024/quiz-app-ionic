@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import ProfileHeader from "../components/ProfileHeader";
 import Quizs from '../components/HOC/Quizs';
@@ -12,13 +12,7 @@ export interface HomePageInterface{
 }
 const Home = ({points,rank }:HomePageInterface) => {
 
-	const [quiz, setQuiz] = useState([
-		{
-			question: "Which of these is not a color?",
-			options: [{ a: "red", b: "blue", c: "green", d: "dog" }],
-			correct: "dog",
-		},
-	]);
+
 	const history = useHistory();
 
 	const chooseQuizHandler = (pathName: string) => {
